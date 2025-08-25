@@ -1,0 +1,502 @@
+[
+  {
+    "name": "STANDARD CHARTERED PLC ORD USD0.50",
+    "percentageChange": 4.19,
+    "marketCap": 31395160000
+  },
+  {
+    "name": "PERSIMMON PLC ORD 10P",
+    "percentageChange": 2.31,
+    "marketCap": 3533120000
+  },
+  {
+    "name": "INTL CONSOLIDATED AIRLINES GROUP SA ORD EUR0.10 (CDI)",
+    "percentageChange": 2.28,
+    "marketCap": 17874610000
+  },
+  {
+    "name": "SCOTTISH MORTGAGE INV TST PLC ORD 5P",
+    "percentageChange": 2.24,
+    "marketCap": 12183870000
+  },
+  {
+    "name": "BERKELEY GROUP HOLDINGS (THE) PLC ORD 5.6110477936P",
+    "percentageChange": 2.16,
+    "marketCap": 3567600000
+  },
+  {
+    "name": "BARRATT REDROW PLC ORD 10P",
+    "percentageChange": 2.13,
+    "marketCap": 5329910000
+  },
+  {
+    "name": "PERSHING SQUARE HOLDINGS LTD ORD NPV",
+    "percentageChange": 2.04,
+    "marketCap": 7513300000
+  },
+  {
+    "name": "ASHTEAD GROUP PLC ORD 10P",
+    "percentageChange": 2.02,
+    "marketCap": 22735700000
+  },
+  {
+    "name": "WHITBREAD PLC ORD 76 122/153P",
+    "percentageChange": 1.97,
+    "marketCap": 5466420000
+  },
+  {
+    "name": "AIRTEL AFRICA PLC ORD USD0.50",
+    "percentageChange": 1.96,
+    "marketCap": 7815760000
+  },
+  {
+    "name": "TAYLOR WIMPEY PLC ORD 1P",
+    "percentageChange": 1.94,
+    "marketCap": 3498180000
+  },
+  {
+    "name": "WPP PLC ORD 10P",
+    "percentageChange": 1.85,
+    "marketCap": 4248319999.9999995
+  },
+  {
+    "name": "ICG PLC ORD 26 1/4P",
+    "percentageChange": 1.85,
+    "marketCap": 6301030000
+  },
+  {
+    "name": "SEGRO PLC ORD 10P",
+    "percentageChange": 1.79,
+    "marketCap": 8600080000
+  },
+  {
+    "name": "HOWDEN JOINERY GROUP PLC ORD 10P",
+    "percentageChange": 1.73,
+    "marketCap": 4713800000
+  },
+  {
+    "name": "CRODA INTERNATIONAL PLC ORD 10.609756P",
+    "percentageChange": 1.67,
+    "marketCap": 3507640000
+  },
+  {
+    "name": "EASYJET PLC ORD 27 2/7P",
+    "percentageChange": 1.55,
+    "marketCap": 3811270000
+  },
+  {
+    "name": "RIO TINTO PLC ORD 10P",
+    "percentageChange": 1.54,
+    "marketCap": 56825810000
+  },
+  {
+    "name": "SCHRODERS PLC ORD 20P",
+    "percentageChange": 1.54,
+    "marketCap": 6291440000
+  },
+  {
+    "name": "INTERCONTINENTAL HOTELS GROUP PLC ORD 20 340/399P",
+    "percentageChange": 1.5,
+    "marketCap": 13548680000
+  },
+  {
+    "name": "STANDARD CHARTERED PLC ORD USD0.50",
+    "percentageChange": 4.19,
+    "marketCap": 31395160000
+  },
+  {
+    "name": "PERSIMMON PLC ORD 10P",
+    "percentageChange": 2.31,
+    "marketCap": 3533120000
+  },
+  {
+    "name": "INTL CONSOLIDATED AIRLINES GROUP SA ORD EUR0.10 (CDI)",
+    "percentageChange": 2.28,
+    "marketCap": 17874610000
+  },
+  {
+    "name": "SCOTTISH MORTGAGE INV TST PLC ORD 5P",
+    "percentageChange": 2.24,
+    "marketCap": 12183870000
+  },
+  {
+    "name": "BERKELEY GROUP HOLDINGS (THE) PLC ORD 5.6110477936P",
+    "percentageChange": 2.16,
+    "marketCap": 3567600000
+  },
+  {
+    "name": "BARRATT REDROW PLC ORD 10P",
+    "percentageChange": 2.13,
+    "marketCap": 5329910000
+  },
+  {
+    "name": "PERSHING SQUARE HOLDINGS LTD ORD NPV",
+    "percentageChange": 2.04,
+    "marketCap": 7513300000
+  },
+  {
+    "name": "ASHTEAD GROUP PLC ORD 10P",
+    "percentageChange": 2.02,
+    "marketCap": 22735700000
+  },
+  {
+    "name": "WHITBREAD PLC ORD 76 122/153P",
+    "percentageChange": 1.97,
+    "marketCap": 5466420000
+  },
+  {
+    "name": "AIRTEL AFRICA PLC ORD USD0.50",
+    "percentageChange": 1.96,
+    "marketCap": 7815760000
+  },
+  {
+    "name": "TAYLOR WIMPEY PLC ORD 1P",
+    "percentageChange": 1.94,
+    "marketCap": 3498180000
+  },
+  {
+    "name": "WPP PLC ORD 10P",
+    "percentageChange": 1.85,
+    "marketCap": 4248319999.9999995
+  },
+  {
+    "name": "ICG PLC ORD 26 1/4P",
+    "percentageChange": 1.85,
+    "marketCap": 6301030000
+  },
+  {
+    "name": "SEGRO PLC ORD 10P",
+    "percentageChange": 1.79,
+    "marketCap": 8600080000
+  },
+  {
+    "name": "HOWDEN JOINERY GROUP PLC ORD 10P",
+    "percentageChange": 1.73,
+    "marketCap": 4713800000
+  },
+  {
+    "name": "CRODA INTERNATIONAL PLC ORD 10.609756P",
+    "percentageChange": 1.67,
+    "marketCap": 3507640000
+  },
+  {
+    "name": "EASYJET PLC ORD 27 2/7P",
+    "percentageChange": 1.55,
+    "marketCap": 3811270000
+  },
+  {
+    "name": "RIO TINTO PLC ORD 10P",
+    "percentageChange": 1.54,
+    "marketCap": 56825810000
+  },
+  {
+    "name": "SCHRODERS PLC ORD 20P",
+    "percentageChange": 1.54,
+    "marketCap": 6291440000
+  },
+  {
+    "name": "INTERCONTINENTAL HOTELS GROUP PLC ORD 20 340/399P",
+    "percentageChange": 1.5,
+    "marketCap": 13548680000
+  },
+  {
+    "name": "STANDARD CHARTERED PLC ORD USD0.50",
+    "percentageChange": 4.19,
+    "marketCap": 31395160000
+  },
+  {
+    "name": "PERSIMMON PLC ORD 10P",
+    "percentageChange": 2.31,
+    "marketCap": 3533120000
+  },
+  {
+    "name": "INTL CONSOLIDATED AIRLINES GROUP SA ORD EUR0.10 (CDI)",
+    "percentageChange": 2.28,
+    "marketCap": 17874610000
+  },
+  {
+    "name": "SCOTTISH MORTGAGE INV TST PLC ORD 5P",
+    "percentageChange": 2.24,
+    "marketCap": 12183870000
+  },
+  {
+    "name": "BERKELEY GROUP HOLDINGS (THE) PLC ORD 5.6110477936P",
+    "percentageChange": 2.16,
+    "marketCap": 3567600000
+  },
+  {
+    "name": "BARRATT REDROW PLC ORD 10P",
+    "percentageChange": 2.13,
+    "marketCap": 5329910000
+  },
+  {
+    "name": "PERSHING SQUARE HOLDINGS LTD ORD NPV",
+    "percentageChange": 2.04,
+    "marketCap": 7513300000
+  },
+  {
+    "name": "ASHTEAD GROUP PLC ORD 10P",
+    "percentageChange": 2.02,
+    "marketCap": 22735700000
+  },
+  {
+    "name": "WHITBREAD PLC ORD 76 122/153P",
+    "percentageChange": 1.97,
+    "marketCap": 5466420000
+  },
+  {
+    "name": "AIRTEL AFRICA PLC ORD USD0.50",
+    "percentageChange": 1.96,
+    "marketCap": 7815760000
+  },
+  {
+    "name": "TAYLOR WIMPEY PLC ORD 1P",
+    "percentageChange": 1.94,
+    "marketCap": 3498180000
+  },
+  {
+    "name": "WPP PLC ORD 10P",
+    "percentageChange": 1.85,
+    "marketCap": 4248319999.9999995
+  },
+  {
+    "name": "ICG PLC ORD 26 1/4P",
+    "percentageChange": 1.85,
+    "marketCap": 6301030000
+  },
+  {
+    "name": "SEGRO PLC ORD 10P",
+    "percentageChange": 1.79,
+    "marketCap": 8600080000
+  },
+  {
+    "name": "HOWDEN JOINERY GROUP PLC ORD 10P",
+    "percentageChange": 1.73,
+    "marketCap": 4713800000
+  },
+  {
+    "name": "CRODA INTERNATIONAL PLC ORD 10.609756P",
+    "percentageChange": 1.67,
+    "marketCap": 3507640000
+  },
+  {
+    "name": "EASYJET PLC ORD 27 2/7P",
+    "percentageChange": 1.55,
+    "marketCap": 3811270000
+  },
+  {
+    "name": "RIO TINTO PLC ORD 10P",
+    "percentageChange": 1.54,
+    "marketCap": 56825810000
+  },
+  {
+    "name": "SCHRODERS PLC ORD 20P",
+    "percentageChange": 1.54,
+    "marketCap": 6291440000
+  },
+  {
+    "name": "INTERCONTINENTAL HOTELS GROUP PLC ORD 20 340/399P",
+    "percentageChange": 1.5,
+    "marketCap": 13548680000
+  },
+  {
+    "name": "STANDARD CHARTERED PLC ORD USD0.50",
+    "percentageChange": 4.19,
+    "marketCap": 31395160000
+  },
+  {
+    "name": "PERSIMMON PLC ORD 10P",
+    "percentageChange": 2.31,
+    "marketCap": 3533120000
+  },
+  {
+    "name": "INTL CONSOLIDATED AIRLINES GROUP SA ORD EUR0.10 (CDI)",
+    "percentageChange": 2.28,
+    "marketCap": 17874610000
+  },
+  {
+    "name": "SCOTTISH MORTGAGE INV TST PLC ORD 5P",
+    "percentageChange": 2.24,
+    "marketCap": 12183870000
+  },
+  {
+    "name": "BERKELEY GROUP HOLDINGS (THE) PLC ORD 5.6110477936P",
+    "percentageChange": 2.16,
+    "marketCap": 3567600000
+  },
+  {
+    "name": "BARRATT REDROW PLC ORD 10P",
+    "percentageChange": 2.13,
+    "marketCap": 5329910000
+  },
+  {
+    "name": "PERSHING SQUARE HOLDINGS LTD ORD NPV",
+    "percentageChange": 2.04,
+    "marketCap": 7513300000
+  },
+  {
+    "name": "ASHTEAD GROUP PLC ORD 10P",
+    "percentageChange": 2.02,
+    "marketCap": 22735700000
+  },
+  {
+    "name": "WHITBREAD PLC ORD 76 122/153P",
+    "percentageChange": 1.97,
+    "marketCap": 5466420000
+  },
+  {
+    "name": "AIRTEL AFRICA PLC ORD USD0.50",
+    "percentageChange": 1.96,
+    "marketCap": 7815760000
+  },
+  {
+    "name": "TAYLOR WIMPEY PLC ORD 1P",
+    "percentageChange": 1.94,
+    "marketCap": 3498180000
+  },
+  {
+    "name": "WPP PLC ORD 10P",
+    "percentageChange": 1.85,
+    "marketCap": 4248319999.9999995
+  },
+  {
+    "name": "ICG PLC ORD 26 1/4P",
+    "percentageChange": 1.85,
+    "marketCap": 6301030000
+  },
+  {
+    "name": "SEGRO PLC ORD 10P",
+    "percentageChange": 1.79,
+    "marketCap": 8600080000
+  },
+  {
+    "name": "HOWDEN JOINERY GROUP PLC ORD 10P",
+    "percentageChange": 1.73,
+    "marketCap": 4713800000
+  },
+  {
+    "name": "CRODA INTERNATIONAL PLC ORD 10.609756P",
+    "percentageChange": 1.67,
+    "marketCap": 3507640000
+  },
+  {
+    "name": "EASYJET PLC ORD 27 2/7P",
+    "percentageChange": 1.55,
+    "marketCap": 3811270000
+  },
+  {
+    "name": "RIO TINTO PLC ORD 10P",
+    "percentageChange": 1.54,
+    "marketCap": 56825810000
+  },
+  {
+    "name": "SCHRODERS PLC ORD 20P",
+    "percentageChange": 1.54,
+    "marketCap": 6291440000
+  },
+  {
+    "name": "INTERCONTINENTAL HOTELS GROUP PLC ORD 20 340/399P",
+    "percentageChange": 1.5,
+    "marketCap": 13548680000
+  },
+  {
+    "name": "STANDARD CHARTERED PLC ORD USD0.50",
+    "percentageChange": 4.19,
+    "marketCap": 31395160000
+  },
+  {
+    "name": "PERSIMMON PLC ORD 10P",
+    "percentageChange": 2.31,
+    "marketCap": 3533120000
+  },
+  {
+    "name": "INTL CONSOLIDATED AIRLINES GROUP SA ORD EUR0.10 (CDI)",
+    "percentageChange": 2.28,
+    "marketCap": 17874610000
+  },
+  {
+    "name": "SCOTTISH MORTGAGE INV TST PLC ORD 5P",
+    "percentageChange": 2.24,
+    "marketCap": 12183870000
+  },
+  {
+    "name": "BERKELEY GROUP HOLDINGS (THE) PLC ORD 5.6110477936P",
+    "percentageChange": 2.16,
+    "marketCap": 3567600000
+  },
+  {
+    "name": "BARRATT REDROW PLC ORD 10P",
+    "percentageChange": 2.13,
+    "marketCap": 5329910000
+  },
+  {
+    "name": "PERSHING SQUARE HOLDINGS LTD ORD NPV",
+    "percentageChange": 2.04,
+    "marketCap": 7513300000
+  },
+  {
+    "name": "ASHTEAD GROUP PLC ORD 10P",
+    "percentageChange": 2.02,
+    "marketCap": 22735700000
+  },
+  {
+    "name": "WHITBREAD PLC ORD 76 122/153P",
+    "percentageChange": 1.97,
+    "marketCap": 5466420000
+  },
+  {
+    "name": "AIRTEL AFRICA PLC ORD USD0.50",
+    "percentageChange": 1.96,
+    "marketCap": 7815760000
+  },
+  {
+    "name": "TAYLOR WIMPEY PLC ORD 1P",
+    "percentageChange": 1.94,
+    "marketCap": 3498180000
+  },
+  {
+    "name": "WPP PLC ORD 10P",
+    "percentageChange": 1.85,
+    "marketCap": 4248319999.9999995
+  },
+  {
+    "name": "ICG PLC ORD 26 1/4P",
+    "percentageChange": 1.85,
+    "marketCap": 6301030000
+  },
+  {
+    "name": "SEGRO PLC ORD 10P",
+    "percentageChange": 1.79,
+    "marketCap": 8600080000
+  },
+  {
+    "name": "HOWDEN JOINERY GROUP PLC ORD 10P",
+    "percentageChange": 1.73,
+    "marketCap": 4713800000
+  },
+  {
+    "name": "CRODA INTERNATIONAL PLC ORD 10.609756P",
+    "percentageChange": 1.67,
+    "marketCap": 3507640000
+  },
+  {
+    "name": "EASYJET PLC ORD 27 2/7P",
+    "percentageChange": 1.55,
+    "marketCap": 3811270000
+  },
+  {
+    "name": "RIO TINTO PLC ORD 10P",
+    "percentageChange": 1.54,
+    "marketCap": 56825810000
+  },
+  {
+    "name": "SCHRODERS PLC ORD 20P",
+    "percentageChange": 1.54,
+    "marketCap": 6291440000
+  },
+  {
+    "name": "INTERCONTINENTAL HOTELS GROUP PLC ORD 20 340/399P",
+    "percentageChange": 1.5,
+    "marketCap": 13548680000
+  }
+]

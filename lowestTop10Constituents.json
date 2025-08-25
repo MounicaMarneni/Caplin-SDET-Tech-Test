@@ -1,0 +1,52 @@
+[
+  {
+    "name": "BRITISH AMERICAN TOBACCO PLC ORD 25P",
+    "percentageChange": -1.78,
+    "marketCap": 96
+  },
+  {
+    "name": "COCA-COLA EUROPACIFIC PARTNERS PLC ORD EUR0.01 (DI)",
+    "percentageChange": -1.76,
+    "marketCap": 31
+  },
+  {
+    "name": "COCA-COLA HBC AG ORD CHF6.70 (CDI)",
+    "percentageChange": -1.32,
+    "marketCap": 14
+  },
+  {
+    "name": "TESCO PLC ORD 6 1/3P",
+    "percentageChange": -1.21,
+    "marketCap": 28
+  },
+  {
+    "name": "NATIONAL GRID PLC ORD 12 204/473P",
+    "percentageChange": -0.99,
+    "marketCap": 52
+  },
+  {
+    "name": "GSK PLC ORD 31 1/4P",
+    "percentageChange": -0.87,
+    "marketCap": 60
+  },
+  {
+    "name": "SAINSBURY(J) PLC ORD 28 4/7P",
+    "percentageChange": -0.85,
+    "marketCap": 7
+  },
+  {
+    "name": "PRUDENTIAL PLC ORD 5P",
+    "percentageChange": -0.81,
+    "marketCap": 25
+  },
+  {
+    "name": "SEVERN TRENT PLC ORD 97 17/19P",
+    "percentageChange": -0.76,
+    "marketCap": 7
+  },
+  {
+    "name": "ASSOCIATED BRITISH FOODS PLC ORD 5 15/22P",
+    "percentageChange": -0.69,
+    "marketCap": 16
+  }
+]
