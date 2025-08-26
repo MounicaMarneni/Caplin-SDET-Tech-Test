@@ -21,15 +21,15 @@ This project contains automated tests for the London Stock Exchange using Playwr
 
 ### Headless mode 
 - npx playwright test - for all tests
-- npx playwright test ftse.spec.ts - for particular file
+- npx playwright test ftse100.spec.ts - for particular file with tests
 ### Headed mode
 - npx playwright test --headed
 
 ### Run using specific browser
-- npx playwright test iplayer.spec.ts --project chromium
+- npx playwright test ftse100.spec.ts --project chromium
 
 ### Run using specific tag
-- npx playwright test iplayer.spec.ts --grep @regression
+- npx playwright test ftse100.spec.ts --grep @regression
 
 ## View Test Report
 - npx playwright show-report
@@ -49,14 +49,18 @@ To install ESLint and its dependencies, run:
 
 ### Configuration
 
-- The ESLint is configured in eslint.config.mjs file where we define set of rules like unused variables, console warnings and explicit any
+- The ESLint is configured in eslint.config.mts file where we define set of rules like unused variables, console warnings and explicit any
 
-### Run
+### Initialise ESLint
+
+- npx eslint --init
+
+### Run to check eslint errors or warnings
 
 - npx eslint .
 
 ## Project Structure
 
 - **pages/**: Contains Page Object classes for different pages (e.g., `homePage.ts`, `ftse100Page.ts`)
-- **tests/**: Contains test files (e.g., `ftse.spec.ts`)
+- **tests/**: Contains test files (e.g., `ftse100.spec.ts`)
 - **README.md**: Documentation for the project

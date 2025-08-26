@@ -30,26 +30,30 @@ export class FTSE100Page {
     readonly highchartsRoot: Locator;
     readonly monthlyLowIndex: Locator;
     readonly loadingIndicatorChart: Locator;
+    readonly activePageLink: Locator;
+    readonly ftse100Idx: Locator;
 
 
     constructor(page: Page) {
         this.page = page;
-        this.ftseIndexTable = page.locator('//table[(contains(@class,"ftse-index-table-table"))]');
+        this.ftseIndexTable = page.locator('table.ftse-index-table-table');
         this.percentageChangeHeader = page.locator('th.percentualchange.hide-on-landscape > span:first-of-type');
         this.tableRows = page.locator('table.full-width tbody tr');
         this.constituents = page.getByRole('link', { name: 'Constituents' });
-        this.quickLinksFtse = page.locator('//table[@class="table-in-rich-text"]//td[2]//a').first();
+        this.quickLinksFtse = page.locator('table.table-in-rich-text td:nth-child(2) a').first();
         this.lowToHighPerChange = page.getByRole('listitem').filter({ hasText: 'Lowest – highest' }).locator('div');
         this.highToLowPerChange = page.getByRole('listitem').filter({ hasText: 'Highest – lowest' }).locator('div');
-        this.ftseHeroTitle = page.locator('//h1[contains(@class, "ftse-hero-title font-bold")]');
+        this.ftseHeroTitle = page.locator('h1.ftse-hero-title.font-bold');
         this.marketCapHighToLow = page.getByRole('listitem').filter({ hasText: 'Highest – lowest' }).locator('div');
         this.marketCap = page.getByText('Market cap (m)');
-        this.pagination = page.locator('//a[contains(@class,"page-number")]');
-        this.fromDateYearInput = page.locator('//input[@aria-label="Year in from date"]');
+        this.pagination = page.locator('a.page-number');
+        this.fromDateYearInput = page.getByLabel('Year in from date');
         this.periodicityDropdown = page.locator('//div[contains(@class,"periodicity")]');
-        this.monthlyLowIndex = page.locator('//*[contains(@aria-label,"Price of base")]');
-        this.highchartsRoot = page.locator('//*[@class="highcharts-root"]');
-        this.loadingIndicatorChart = page.locator('//div[@class="v-loader__item"]');
+        this.monthlyLowIndex = page.locator('[aria-label*="Price of base"]');
+        this.highchartsRoot = page.locator('.highcharts-root');
+        this.loadingIndicatorChart = page.locator('div.v-loader__item');
+        this.activePageLink = this.page.locator(`//a[contains(@class,'active')]`);
+        this.ftse100Idx = page.locator('//div[contains(@class,"highcharts-legend-item")]//span');   
     }
 
     async navigateToFTSE100() {
@@ -60,38 +64,34 @@ export class FTSE100Page {
     }
 
     async navigateToConstituents() {
-        // await expect(this.ftseHeroTitle).toBe('"FTSE 100"');
-
         await expect(this.constituents).toBeVisible();
         await this.constituents.click();
         await this.page.waitForLoadState('networkidle');
         await expect(this.page).toHaveURL(/.*ftse-100\/constituents.*/);
     }
 
-    async getPercentageChangeHeader() {
+    async getPercentageChangeHeader(): Promise<string | null> {
         await expect(this.ftseIndexTable).toBeVisible();
         return await this.percentageChangeHeader.getAttribute('class');
     }
 
-    async getTop10ConstituentsByPercentageChange() {
+    async getTop10ConstituentsByPercentageChange(): Promise<Constituent[]> {
         const top10Rows = await this.tableRows.evaluateAll((rows) => {
             return rows.slice(0, 10).map((row) => {
-                const name = row.querySelector('td.instrument-name')?.textContent?.trim();
+                const name = row.querySelector('td.instrument-name')?.textContent?.trim() || '';
                 const percentageChange = parseFloat(
                     row.querySelector('td.instrument-percentualchange')?.textContent?.trim() || '0'
                 );
-                const marketCap = parseFloat(
-                    row.querySelector('td.instrument-marketcapitalization')?.textContent?.trim() || '0'
-                );
+                const marketCapText = row.querySelector('td.instrument-marketcapitalization')?.textContent?.trim() || '0';
+                const marketCap = parseFloat(marketCapText.replace(/,/g, ''));
                 return { name, percentageChange, marketCap };
             });
         });
         return top10Rows;
     }
 
-    async writeToFile(data: { name: string; percentageChange: number; marketCap: number }[], filePath: string): Promise<void> {
+    async writeToFile(data: Constituent[], filePath: string): Promise<void> {
         writeFileSync(filePath, JSON.stringify(data, null, 2));
-        console.log(`Data written to file: ${filePath}`);
     }
 
     async clickLowToHighPercentageChange() {
@@ -99,6 +99,13 @@ export class FTSE100Page {
         await this.percentageChangeHeader.click();
         await expect(this.lowToHighPerChange).toBeVisible();
         await this.lowToHighPerChange.click();
+         // Wait for the table to be sorted correctly by checking the order of percentage changes
+         await this.page.waitForFunction(() => {
+            const percentages = Array.from(document.querySelectorAll('table.full-width tbody tr td.instrument-percentualchange'))
+                .map(el => parseFloat(el.textContent?.trim() || '0'));
+
+            return percentages.length > 0 && percentages[0] < percentages[percentages.length - 1];
+        });
     }
 
     async clickHighToLowPercentageChange() {
@@ -113,20 +120,26 @@ export class FTSE100Page {
         await this.marketCap.click();
         await expect(this.marketCapHighToLow).toBeVisible();
         await this.marketCapHighToLow.click();
+        await this.page.waitForLoadState('networkidle');
+        await this.tableRows.first().waitFor({ state: 'visible'});
+        // Wait for the table to be sorted correctly by checking the order of market caps
+        await this.page.waitForFunction(() => {
+            const marketCaps = Array.from(document.querySelectorAll('table.full-width tbody tr td.instrument-marketcapitalization'))
+                .map(el => parseFloat(el.textContent?.trim() || '0'));
+
+            return marketCaps.length > 0 && marketCaps[0] > marketCaps[marketCaps.length - 1];
+        });
+
     }
 
     async getAllConstituentsWithMarketCapExceeding(threshold: number): Promise<Constituent[]> {
         let allConstituents: Constituent[] = [];
         let currentPageNumber = 1;
         while (true) {
-            await this.page.waitForLoadState('networkidle');
-            await this.tableRows.first().waitFor({ state: 'visible' });
-
             if (await this.tableRows.count() === 0) {
                 break;
             }
-
-            const pageData = await this.tableRows.evaluateAll((rows, threshold) => {
+            const pageConstituents = await this.tableRows.evaluateAll((rows, innerThreshold) => {
                 const pageConstituents = rows.map(row => {
                     const name = row.querySelector('td.instrument-name')?.textContent?.trim() || '';
                     const percentageChange = parseFloat(
@@ -137,14 +150,11 @@ export class FTSE100Page {
                     return { name, percentageChange, marketCap };
                 });
 
-                const constituentsAboveThreshold = pageConstituents.filter(c => c.marketCap > threshold);
-                console.log("Constituents above threshold on this page:", constituentsAboveThreshold.length);
-
-                return { constituents: constituentsAboveThreshold };
-
+                return pageConstituents.filter(c => c.marketCap > innerThreshold);
             }, threshold);
 
-            allConstituents = allConstituents.concat(pageData.constituents);
+            allConstituents = allConstituents.concat(pageConstituents);
+            console.log(`found ${pageConstituents.length} constituents exceeding threshold.`);
 
             // Navigate to the next page if it exists
             const nextPageNumber = currentPageNumber + 1;
@@ -152,6 +162,21 @@ export class FTSE100Page {
 
             if (await nextPageLink.isVisible() && await nextPageLink.isEnabled()) {
                 await nextPageLink.click();
+                await this.page.waitForLoadState('networkidle');
+                await expect(this.page).toHaveURL(new RegExp(`page=${nextPageNumber}`));
+
+                // Wait until the active page button shows the correct number
+                await this.page.waitForFunction(
+                    (expected) => {
+                        const active = document.querySelector('a.active');
+                        return active?.textContent?.trim() === expected;
+                    },
+                    nextPageNumber.toString(),
+                    { timeout: 5000 }
+                );
+                // Assert that the active page button matches the page we clicked
+                const activeText = await this.activePageLink.textContent();
+                expect(activeText?.trim()).toBe(nextPageNumber.toString());
                 currentPageNumber++;
             } else {
                 break;
@@ -169,19 +194,24 @@ export class FTSE100Page {
     async selectPeriodicityOption(optionText: string) {
         await expect(this.periodicityDropdown).toBeVisible();
         await this.periodicityDropdown.click();
-        const option = this.page.locator(`//div[contains(text(),"${optionText}")]`);
+        const option = this.page.getByText(optionText, { exact: true });
         await expect(option).toBeVisible();
         await option.click();
     }
 
-    async getMonthlyAverageIndexValues(): Promise<PriceInfo | null> {
+    async getLowestMonthlyAverageIndexValue(): Promise<PriceInfo | null> {
         await this.loadingIndicatorChart.waitFor({ state: 'hidden' });
+        await expect(this.highchartsRoot).toBeVisible();
+        const idx = await this.ftse100Idx.textContent();
+        await expect(idx).toBe("FTSE 100 IDX");
+        await this.monthlyLowIndex.first().waitFor({ state: 'visible', timeout: 20000 });
+        // Extract aria-label attributes from the monthlyLowIndex elements
         const labels: string[] = await this.monthlyLowIndex.evaluateAll(elements =>
             elements.map(el => el.getAttribute('aria-label') || '')
         );
         const extracted: PriceInfo[] = [];
-
         for (const text of labels) {
+            // Extract price and month-year using regex from aria-label text
             const priceMatch = text.match(/is\s+([\d\s,]+)/);
             const price = priceMatch ? parseFloat(priceMatch[1].replace(/\s/g, '').replace(',', '.')) : NaN;
 
@@ -196,8 +226,7 @@ export class FTSE100Page {
         if (extracted.length === 0) {
             return null;
         }
-
-        return extracted.reduce((min, item) => (item.price < min.price ? item : min));
+        return extracted.reduce((min, item) => (item.price < min.price ? item : min), extracted[0]);
     }
 
 }

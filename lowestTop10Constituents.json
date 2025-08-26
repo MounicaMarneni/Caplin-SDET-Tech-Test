@@ -1,52 +1,52 @@
 [
   {
-    "name": "BRITISH AMERICAN TOBACCO PLC ORD 25P",
-    "percentageChange": -1.78,
-    "marketCap": 96
-  },
-  {
-    "name": "COCA-COLA EUROPACIFIC PARTNERS PLC ORD EUR0.01 (DI)",
-    "percentageChange": -1.76,
-    "marketCap": 31
-  },
-  {
-    "name": "COCA-COLA HBC AG ORD CHF6.70 (CDI)",
-    "percentageChange": -1.32,
-    "marketCap": 14
-  },
-  {
-    "name": "TESCO PLC ORD 6 1/3P",
-    "percentageChange": -1.21,
-    "marketCap": 28
-  },
-  {
-    "name": "NATIONAL GRID PLC ORD 12 204/473P",
-    "percentageChange": -0.99,
-    "marketCap": 52
-  },
-  {
-    "name": "GSK PLC ORD 31 1/4P",
-    "percentageChange": -0.87,
-    "marketCap": 60
-  },
-  {
-    "name": "SAINSBURY(J) PLC ORD 28 4/7P",
-    "percentageChange": -0.85,
-    "marketCap": 7
-  },
-  {
-    "name": "PRUDENTIAL PLC ORD 5P",
-    "percentageChange": -0.81,
-    "marketCap": 25
-  },
-  {
-    "name": "SEVERN TRENT PLC ORD 97 17/19P",
-    "percentageChange": -0.76,
-    "marketCap": 7
+    "name": "KINGFISHER PLC ORD 15 5/7P",
+    "percentageChange": -4.3,
+    "marketCap": 4922.41
   },
   {
     "name": "ASSOCIATED BRITISH FOODS PLC ORD 5 15/22P",
-    "percentageChange": -0.69,
-    "marketCap": 16
+    "percentageChange": -3.89,
+    "marketCap": 16568.1
+  },
+  {
+    "name": "CONVATEC GROUP PLC ORD 10P",
+    "percentageChange": -2.88,
+    "marketCap": 4976.87
+  },
+  {
+    "name": "BRITISH AMERICAN TOBACCO PLC ORD 25P",
+    "percentageChange": -2.74,
+    "marketCap": 94534.99
+  },
+  {
+    "name": "STANDARD CHARTERED PLC ORD USD0.50",
+    "percentageChange": -2.61,
+    "marketCap": 32703.23
+  },
+  {
+    "name": "COMPASS GROUP PLC ORD 11 1/20P",
+    "percentageChange": -2.6,
+    "marketCap": 44421.75
+  },
+  {
+    "name": "SCHRODERS PLC ORD 20P",
+    "percentageChange": -2.57,
+    "marketCap": 6388.08
+  },
+  {
+    "name": "BERKELEY GROUP HOLDINGS (THE) PLC ORD 5.6110477936P",
+    "percentageChange": -2.32,
+    "marketCap": 3641.83
+  },
+  {
+    "name": "RENTOKIL INITIAL PLC ORD 1P",
+    "percentageChange": -2.15,
+    "marketCap": 9159.42
+  },
+  {
+    "name": "ICG PLC ORD 26 1/4P",
+    "percentageChange": -2.08,
+    "marketCap": 6417.29
   }
 ]
